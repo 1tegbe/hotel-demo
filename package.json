@@ -1,0 +1,14 @@
+{
+  "name": "hotel-demo-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix hotel-app run dev",
+    "build": "npm --prefix hotel-app run build",
+    "preview": "npm --prefix hotel-app run preview"
+  },
+  "dependencies": {
+    "motion": "^12.42.2",
+    "react-icon": "^1.0.0",
+    "react-router-dom": "^7.18.1"
+  }
+}
