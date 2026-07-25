@@ -16,10 +16,10 @@ const FeaturedComponent = () => {
      backgroundPosition: 'center',
      height: '500px',
     
-}} className="hover:sca w-full md:w-40">
+}} className="hover:sca w-full md:w-300">
 <p className="backdrop-blur-md  w-35 text-xl py-2 px-2 font-medium font-inter ring-amber-300 ring-1 mx-10 my-10">Clifftop Suite</p>
 <div className="md:mt-80 mt-40">
-    <span><p className="text-xl text-white font-bold font-"
+    <span><p className="md:text-xl text-base mx-10 text-white font-bold font-"
     >Villa Aegean</p>
     
     </span>
@@ -32,7 +32,7 @@ const FeaturedComponent = () => {
      backgroundPosition: 'center',
      height: '500px',
     
-}} className="hover:sca w-full md:w-40">
+}} className="hover:sca w-full md:w-300">
 
 </div>
 </div>
