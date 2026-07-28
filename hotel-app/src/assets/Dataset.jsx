@@ -1,12 +1,27 @@
+import pic1 from "./1.jpg";
+import pic2 from "./2.jpg";
+import pic3 from "./3.jpg";
+import pic4 from"./4.jpg";
+import pic5 from"./5.jpg";
+import pic6 from"./6.jpg";
+import pic7 from"./7.jpg";
+import pic8 from"./8.jpg";
+import pic9 from"./9.jpg";
+import pic10 from"./10.jpg";
+import pic11 from"./11.jpg";
+import pic12 from"./12.jpg";
+import pic13 from"./13.jpg";
+import pic14 from"./14.jpg";
+import pic15 from"./15.jpg";
 const hotelRooms = [
   {
     id: 1,
     category: "Standard",
     price: 25000,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,room,standard",
-      "https://source.unsplash.com/800x600/?hotel,bed",
-      "https://source.unsplash.com/800x600/?hotel,bathroom"
+      pic1,
+      pic2,
+      pic3,
     ]
   },
   {
@@ -14,9 +29,9 @@ const hotelRooms = [
     category: "Deluxe",
     price: 15000,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,deluxe,room",
-      "https://source.unsplash.com/800x600/?hotel,interior",
-      "https://source.unsplash.com/800x600/?hotel,window,view"
+pic4,
+pic5,
+pic6
     ]
   },
   {
@@ -24,9 +39,9 @@ const hotelRooms = [
     category: "Suite",
     price: 40000,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,suite",
-      "https://source.unsplash.com/800x600/?hotel,living,area",
-      "https://source.unsplash.com/800x600/?hotel,luxury"
+    pic7,
+    pic8,
+    pic9
     ]
   },
   {
@@ -34,9 +49,9 @@ const hotelRooms = [
     category: "Executive",
     price: 249,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,executive,room",
-      "https://source.unsplash.com/800x600/?hotel,desk",
-      "https://source.unsplash.com/800x600/?hotel,skyline"
+     pic10,
+     pic11,
+     pic12
     ]
   },
   {
@@ -44,9 +59,9 @@ const hotelRooms = [
     category: "Standard",
     price: 25000,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,twin,room",
-      "https://source.unsplash.com/800x600/?hotel,closet",
-      "https://source.unsplash.com/800x600/?hotel,curtains"
+      pic5,
+      pic5,
+      pic5
     ]
   },
   {
@@ -54,9 +69,9 @@ const hotelRooms = [
     category: "Deluxe",
     price: 139,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,king,bed",
-      "https://source.unsplash.com/800x600/?hotel,minibar",
-      "https://source.unsplash.com/800x600/?hotel,balcony"
+      "https://picsum.photos/seed/room6a/800/600",
+      "https://picsum.photos/seed/room6b/800/600",
+      "https://picsum.photos/seed/room6c/800/600"
     ]
   },
   {
@@ -64,9 +79,9 @@ const hotelRooms = [
     category: "Suite",
     price: 219,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,penthouse",
-      "https://source.unsplash.com/800x600/?hotel,jacuzzi",
-      "https://source.unsplash.com/800x600/?hotel,dining,area"
+      "https://picsum.photos/seed/room7a/800/600",
+      "https://picsum.photos/seed/room7b/800/600",
+      "https://picsum.photos/seed/room7c/800/600"
     ]
   },
   {
@@ -74,9 +89,9 @@ const hotelRooms = [
     category: "Family",
     price: 159,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,family,room",
-      "https://source.unsplash.com/800x600/?hotel,bunk,bed",
-      "https://source.unsplash.com/800x600/?hotel,playroom"
+      "https://picsum.photos/seed/room8a/800/600",
+      "https://picsum.photos/seed/room8b/800/600",
+      "https://picsum.photos/seed/room8c/800/600"
     ]
   },
   {
@@ -84,9 +99,9 @@ const hotelRooms = [
     category: "Standard",
     price: 25000,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,single,room",
-      "https://source.unsplash.com/800x600/?hotel,tv",
-      "https://source.unsplash.com/800x600/?hotel,wardrobe"
+      "https://picsum.photos/seed/room9a/800/600",
+      "https://picsum.photos/seed/room9b/800/600",
+      "https://picsum.photos/seed/room9c/800/600"
     ]
   },
   {
@@ -94,9 +109,9 @@ const hotelRooms = [
     category: "Deluxe",
     price: 145,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,queen,bed",
-      "https://source.unsplash.com/800x600/?hotel,sofa",
-      "https://source.unsplash.com/800x600/?hotel,city,view"
+      "https://picsum.photos/seed/room10a/800/600",
+      "https://picsum.photos/seed/room10b/800/600",
+      "https://picsum.photos/seed/room10c/800/600"
     ]
   },
   {
@@ -104,9 +119,9 @@ const hotelRooms = [
     category: "Presidential Suite",
     price: 399,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,presidential,suite",
-      "https://source.unsplash.com/800x600/?hotel,grand,room",
-      "https://source.unsplash.com/800x600/?hotel,marble,bathroom"
+      "https://picsum.photos/seed/room11a/800/600",
+      "https://picsum.photos/seed/room11b/800/600",
+      "https://picsum.photos/seed/room11c/800/600"
     ]
   },
   {
@@ -114,9 +129,9 @@ const hotelRooms = [
     category: "Family",
     price: 175,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,large,room",
-      "https://source.unsplash.com/800x600/?hotel,kids,bed",
-      "https://source.unsplash.com/800x600/?hotel,kitchenette"
+      "https://picsum.photos/seed/room12a/800/600",
+      "https://picsum.photos/seed/room12b/800/600",
+      "https://picsum.photos/seed/room12c/800/600"
     ]
   },
   {
@@ -124,9 +139,7 @@ const hotelRooms = [
     category: "Executive",
     price: 259,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,office,room",
-      "https://source.unsplash.com/800x600/?hotel,lounge",
-      "https://source.unsplash.com/800x600/?hotel,night,view"
+  
     ]
   },
   {
@@ -134,9 +147,9 @@ const hotelRooms = [
     category: "Standard",
     price: 25000,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,economy,room",
-      "https://source.unsplash.com/800x600/?hotel,shower",
-      "https://source.unsplash.com/800x600/?hotel,hallway"
+      "https://picsum.photos/seed/room14a/800/600",
+      "https://picsum.photos/seed/room14b/800/600",
+      "https://picsum.photos/seed/room14c/800/600"
     ]
   },
   {
@@ -144,9 +157,9 @@ const hotelRooms = [
     category: "Suite",
     price: 229,
     images: [
-      "https://source.unsplash.com/800x600/?hotel,honeymoon,suite",
-      "https://source.unsplash.com/800x600/?hotel,romantic,room",
-      "https://source.unsplash.com/800x600/?hotel,candles"
+      "https://picsum.photos/seed/room15a/800/600",
+      "https://picsum.photos/seed/room15b/800/600",
+      "https://picsum.photos/seed/room15c/800/600"
     ]
   }
 ];

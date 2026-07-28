@@ -8,6 +8,7 @@ import Calendar from 'react-calendar'
 import { useNavigate } from "react-router-dom";
 import FeaturedComponent from "../Component/FeaturedComponent"
 const HomePage = () => {
+const navigate =useNavigate();
   const { checkIn, setCheckIn, checkOut, setCheckOut, guest, setGuest } = useContext(DateContext);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -46,14 +47,15 @@ console.log(checkOut);
   const total = nights * roomPrice;
 
   const handleSubmit = (event) => {
+    
     event.preventDefault();
-    if ((selected|| checkOut||checkIn)===null){
+    if (!selected|| !checkOut|| !checkIn){
     alert("All field required");
+ return;
     }
-    else{
-      useNavigate('/room');
-    }
-    console.log({ checkIn, checkOut, guest, nights, total });
+     navigate('/room');
+ console.log({ checkIn, checkOut, guest, nights, total });
+
   };
 
   useEffect(() => {
@@ -85,7 +87,7 @@ console.log(checkOut);
 a memory.</span>
 <h1 className="md:text-xl text-gray-200 md:py-20 md:w-full w-60 text-base py-5">Discover our handpicked collection of extraordinary hotels across the world's most coveted destinations.</h1></div>
 {/*----------------------------------------------------------------------------------the booking section-----------------------------------*/}
-<div className="p w-60 md:w-200 sm:mx-10 place-self-center bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl text-white rounded-xl flex-col font-inter px-2 py-2 ">
+<div className=" w-60 md:w-200 sm:mx-10 place-self-center bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl text-white rounded-xl flex-col font-inter px-2 py-2 ">
   <span className="sm:mx-auto md:flex md:px-4 py-2 px- gap-x-3 " >
    
     <div className="font-inter  font-medium text-black">

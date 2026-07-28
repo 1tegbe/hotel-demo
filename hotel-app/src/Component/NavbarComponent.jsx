@@ -18,8 +18,8 @@ const NavbarComponent = () => {
 
   return (
     <nav
-      className={`flex flex-col md:flex-row items-start md:items-center justify-between px-6 py-4 md:px-10 ${
-        scroll ? 'sticky top-0 bg-white shadow-sm' : 'absolute inset-x-0 top-0 bg-transparent'
+      className={`flex flex-col md:flex-row items-start md:items-center  justify-between px-6 py-4 md:px-10 ${
+        scroll ? 'sticky shadow-xl top-0 backdrop-blur-2xl ' : 'absolute inset-x-0 top-0 bg-transparent'
       }`}
     >
       <Link to="/" className="text-2xl font-medium text-white sm:text-black ">
@@ -37,7 +37,7 @@ const NavbarComponent = () => {
         </button>
 
         <ul
-          className={`mt-4 flex flex-col gap-3 text-lg font-medium text-gray-700 md:mt-0 md:flex md:flex-row md:items-center md:gap-5 md:text-xl ${
+          className={`mt-4 flex flex-col gap-3 text-lg font-medium text-gray-900 md:mt-0 md:flex md:flex-row md:items-center md:gap-5 md:text-xl ${
             menu ? 'flex bg-white relative text-center ' : 'hidden'
           } md:flex`}
         >
