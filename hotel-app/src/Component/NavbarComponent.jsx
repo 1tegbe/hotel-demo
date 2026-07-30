@@ -46,11 +46,7 @@ const NavbarComponent = () => {
               Gallery
             </Link>
           </li>
-          <li>
-            <Link to="/room" className="hover:text-gray-600">
-              Rooms
-            </Link>
-          </li>
+        
           <li>
             <Link to="/" className="hover:text-gray-600">
               Destinations

@@ -44,8 +44,8 @@ console.log(checkOut);
   const nights = checkIn && checkOut
     ? Math.max(0, Math.round((new Date(checkOut) - new Date(checkIn)) / (1000 * 60 * 60 * 24)))
     : 0;
-  const total = nights * roomPrice;
 
+console.log(guest)
   const handleSubmit = (event) => {
     
     event.preventDefault();
@@ -94,10 +94,13 @@ a memory.</span>
   <p className="md:text-xl font-inter text-base" >Check in</p>
   <input type="date" name="check_in" id=""required value={checkIn} onChange={handleCheckIn} />
 </div>
-  <div className="font-inter font-medium text-black  ">
+  <div className="font-inter font-medium text-black  "w>
   <p className="md:text-xl font-inter text-base" >Check out <output></output></p>
   <input type="date" name="check_out" id="" required value={checkOut} onChange={handleCheckOut}  /></div>
   <div>
+    <div className="flex">
+      <button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" onClick={(prev)=>{setGuest(prev + 1)}}>+</button> <span className="text-xl font-bold text-black mx-4">{guest}</span><button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" >-</button>
+    </div>
    {/*----the select menu ---- for the room category ------------------------------------------*/}
  <div className={`  ml-3 flex mt-4` } onClick={()=>{setShow(!show)}}>
  <span className="md:text-xl font-inter mr-4 text-black">{selected||"Select your category"

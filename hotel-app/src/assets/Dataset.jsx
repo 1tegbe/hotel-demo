@@ -30,6 +30,9 @@ const hotelRooms = [
   {
     id: 2,
     category: "Deluxe",
+    text:"Ryokan Arashiyama, Kyoto",
+    head:"Bamboo Garden Villa",
+    story:"Perched on the caldera edge, this whitewashed suite frames an unobstructed view of the Aegean from every room. The private plunge pool is heated year-round.",
     price: 15000,
     images: [
 pic4,
@@ -40,6 +43,9 @@ pic6
   {
     id: 3,
     category: "Suite",
+      text:"Palazzo Ravello, Amalfi Coast",
+    head:"Palazzo Terrace",
+    story:"A 16th-century palazzo suite with hand-frescoed ceilings and a wrap-around terrace overlooking the Tyrrhenian Sea. Lemon trees scent the private loggia.",
     price: 40000,
     images: [
     pic7,
@@ -50,7 +56,10 @@ pic6
   {
     id: 4,
     category: "Executive",
-    price: 249,
+    text:"Overwater Atoll, Maldives",
+    head:"Overwater Villa",
+    story:"Built entirely over the Indian Ocean lagoon, the glass-floor living room reveals the reef below. A private ocean deck and direct lagoon access complete the experience.",
+    price: 24900,
     images: [
      pic10,
      pic11,
@@ -60,6 +69,9 @@ pic6
   {
     id: 5,
     category: "Standard",
+      text:"Explora Patagonia, Chile",
+    head:"Mountain Lodge Room",
+    story:"Floor-to-ceiling panoramas of Torres del Paine from the warmth of your stone-and-timber lodge room. Gear room, guide service, and mulled wine await.",
     price: 25000,
     images: [
       pic5,
