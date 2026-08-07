@@ -1,9 +1,11 @@
-import React from 'react'
-import {useParams} from "react-router-dom"
-
+import {React, useContext} from 'react'
+import {RoomContext} from "../Roomcontext/Roomlist"
 const RoomId = () => {
-  return (
-    <div>RoomId</div>
+  const {arr_id}=useContext(RoomContext); 
+console.log(arr_id)
+  return (<>
+    </>
+    
   )
 }
 

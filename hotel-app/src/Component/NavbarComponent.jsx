@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5';
-
+import Logo from "../assets/Screenshot_2026-08-06_224501-removebg-preview.png";
 const NavbarComponent = () => {
   const [scroll, setScroll] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -18,12 +18,11 @@ const NavbarComponent = () => {
 
   return (
     <nav
-      className={`flex flex-col md:flex-row items-start md:items-center  justify-between px-6 py-4 md:px-10 ${
-        scroll ? 'sticky shadow-xl top-0 backdrop-blur-2xl ' : 'absolute inset-x-0 top-0 bg-transparent'
-      }`}
+      className={`sticky top-0 z-50 flex flex-col items-start justify-between px-6 py-4 shadow-xl backdrop-blur-2xl md:flex-row md:items-center md:px-10 
+      `}
     >
       <Link to="/" className="text-2xl font-medium text-white sm:text-black ">
-        Élara
+        <img src={Logo} alt="" className="bg-transparent w-40" />
       </Link>
 
       <div className="w-full md:w-auto md:ml-auto">
@@ -46,24 +45,13 @@ const NavbarComponent = () => {
               Gallery
             </Link>
           </li>
-        
-          <li>
-            <Link to="/" className="hover:text-gray-600">
-              Destinations
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="hover:text-gray-600">
-              Experiences
-            </Link>
-          </li>
           <li>
             <Link to="/contact" className="hover:text-gray-600">
-              Contact
+              Contact Us
             </Link>
           </li>
           <li className="bg-amber-300 px-4 py-2 uppercase tracking-[0.15em] text-neutral-900 transition hover:bg-amber-400 md:px-10 md:py-4">
-            <Link to="/room">Reserve</Link>
+            <Link to="/">Reserve</Link>
           </li>
         </ul>
       </div>

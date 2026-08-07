@@ -5,6 +5,7 @@ import Footer from "./Component/Footer"
 import RoomPage from "./Page/RoomPage"
 import Gallery from "./Page/Gallery"
 import Contact from "./Page/Contact"
+import CheckoutPage from "./Page/CheckoutPage";
 function App() {
 
   return (
@@ -16,8 +17,10 @@ function App() {
          <Route path="/room" element={<RoomPage/>}/>
          <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/checkout" element={<CheckoutPage/>}/>
+          
       </Routes>
-      <Footer/>
+      <Footer className="overflow-hidden"/>
     </BrowserRouter>
       </>
   )
