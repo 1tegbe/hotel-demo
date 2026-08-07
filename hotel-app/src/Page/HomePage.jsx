@@ -37,7 +37,7 @@ const HomePage = () => {
 a memory.</div>
 <h1 className="md:text-xl text-gray-200 md:py-20 md:w-full w-60 text-base py-5">Discover our handpicked collection of extraordinary hotels across the world's most coveted destinations.</h1></div>
 {/*----------------------------------------------------------------------------------the booking section-----------------------------------*/}
-<BookingMenu/>
+<BookingMenu />
 
         </div>
       
