@@ -64,7 +64,7 @@ return 1;
   return (
     <div>
 <div className="static w-60 md:w-230 sm:mx-10 place-self-center bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl text-white rounded-xl flex-col font-inter px-2 py-2 " >
-  <span className="sm:mx-auto flex md:px-4 py-2 px- gap-x-3 " >
+  <span className="sm:mx-auto md:flex md:px-4 py-2   md:gap-x-3 " >
    
     <div className="font-inter  font-medium text-black">
   <p className="md:text-xl font-inter text-base" >Check in</p>

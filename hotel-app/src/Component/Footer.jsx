@@ -8,7 +8,7 @@ export default function DusselFooter() {
 
   return (<div>
     
-    <footer className="bg-black text-neutral-300 border-b border-gray-500">
+    <footer className="bg-black text-neutral-300 border-b border-gray-500 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
