@@ -68,11 +68,11 @@ return 1;
    
     <div className="font-inter  font-medium text-black">
   <p className="md:text-xl font-inter text-base" >Check in</p>
-  <input type="date" name="check_in" id=""required value={checkIn} onChange={handleCheckIn} />
+  <input type="date" name="check_in" id=""required value={checkIn} onChange={handleCheckIn} className="text-black" />
 </div>
   <div className="font-inter font-medium text-black">
   <p className="md:text-xl font-inter text-base" >Check out <output></output></p>
-  <input type="date" name="check_out" min={checkIn} disabled={!checkIn}  required value={checkOut} onChange={handleCheckOut}  /></div>
+  <input type="date" name="check_out" className="text-black" min={checkIn} disabled={!checkIn}  required value={checkOut} onChange={handleCheckOut}  /></div>
   <div>
     <div className="flex">
       <button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" onClick={()=>{setGuest(guest + 1)}}>+</button> <span className="text-xl font-bold text-black mx-4">{guest}</span><button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" onClick={handleguest_sub}>-</button>
