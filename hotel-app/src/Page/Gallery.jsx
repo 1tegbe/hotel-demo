@@ -18,7 +18,7 @@ const Gallery = () => {
           {(GalleryData?.gallery || []).map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-2xl shadow-sm"
+              className="group relative overflow-hidden rounde shadow-sm"
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
             >

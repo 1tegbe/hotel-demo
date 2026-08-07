@@ -29,7 +29,7 @@ const NavbarComponent = () => {
         <button
           type="button"
           onClick={() => setMenu(!menu)}
-          className="ml-auto  block text-2xl text-white md:hidden"
+          className="ml-auto  block text-2xl text-black md:hidden"
           aria-label="Toggle navigation"
         >
           {menu ? <IoCloseOutline /> : <IoMenuOutline />}
