@@ -57,6 +57,14 @@ console.log(guest)
  console.log({ checkIn, checkOut, guest, nights, total });
 
   };
+const handleguest_sub=()=>{
+  if (guest<=1){
+return 1;
+  }
+  else{
+   return setGuest(guest - 1);
+  }
+}
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -94,12 +102,12 @@ a memory.</span>
   <p className="md:text-xl font-inter text-base" >Check in</p>
   <input type="date" name="check_in" id=""required value={checkIn} onChange={handleCheckIn} />
 </div>
-  <div className="font-inter font-medium text-black  "w>
+  <div className="font-inter font-medium text-black">
   <p className="md:text-xl font-inter text-base" >Check out <output></output></p>
   <input type="date" name="check_out" id="" required value={checkOut} onChange={handleCheckOut}  /></div>
   <div>
     <div className="flex">
-      <button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" onClick={(prev)=>{setGuest(prev + 1)}}>+</button> <span className="text-xl font-bold text-black mx-4">{guest}</span><button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" >-</button>
+      <button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" onClick={()=>{setGuest(guest + 1)}}>+</button> <span className="text-xl font-bold text-black mx-4">{guest}</span><button className="text-xl font-bold outline outline-transparent backdrop-blur-2xl rounded-md px-2 py-2" onClick={handleguest_sub}>-</button>
     </div>
    {/*----the select menu ---- for the room category ------------------------------------------*/}
  <div className={`  ml-3 flex mt-4` } onClick={()=>{setShow(!show)}}>
