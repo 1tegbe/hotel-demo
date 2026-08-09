@@ -1,29 +1,41 @@
-import {BrowserRouter ,Routes,Route } from "react-router-dom";
-import NavbarComponent from "./Component/NavbarComponent";
-import HomePage from "./Page/HomePage";
-import Footer from "./Component/Footer"
-import RoomPage from "./Page/RoomPage"
-import Gallery from "./Page/Gallery"
-import Contact from "./Page/Contact"
-import CheckoutPage from "./Page/CheckoutPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import NavbarComponent from './Component/NavbarComponent';
+import HomePage from './Page/HomePage';
+import Footer from './Component/Footer';
+import RoomPage from './Page/RoomPage';
+import Gallery from './Page/Gallery';
+import Contact from './Page/Contact';
+import CheckoutPage from './Page/CheckoutPage';
+import CartPage from './Page/CartPage';
+import Loading from './Component/Loading';
+
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setIsLoading(false), 4000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
-    <>
     <BrowserRouter>
-    <NavbarComponent/>  
+      <NavbarComponent />
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
-         <Route path="/room" element={<RoomPage/>}/>
-         <Route path="/gallery" element={<Gallery/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/checkout" element={<CheckoutPage/>}/>
-          
+        <Route path="/" element={<HomePage />} />
+        <Route path="/room" element={<RoomPage />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
-      <Footer className="overflow-hidden"/>
+      <Footer className="overflow-hidden" />
     </BrowserRouter>
-      </>
-  )
+  );
 }
 
-export default App
+export default App;

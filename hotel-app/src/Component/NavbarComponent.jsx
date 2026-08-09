@@ -7,6 +7,8 @@ const NavbarComponent = () => {
   const [scroll, setScroll] = useState(false);
   const [menu, setMenu] = useState(false);
 
+  const closeMenu = () => setMenu(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 100);
@@ -41,27 +43,22 @@ const NavbarComponent = () => {
           } md:flex`}
         >
           <li>
-            <Link to="/gallery" className="hover:text-gray-600 ">
+            <Link to="/gallery" className="hover:text-gray-600" onClick={closeMenu}>
               Gallery
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="hover:text-gray-600">
+            <Link to="/contact" className="hover:text-gray-600" onClick={closeMenu}>
               Contact Us
             </Link>
           </li>
-            <li>
-            <Link to="/contact" className="hover:text-gray-600">
-              Service
-            </Link>
-          </li>
-                 <li>
-            <Link to="/contact" className="hover:text-gray-600">
+          <li>
+            <Link to="/cart" className="hover:text-gray-600" onClick={closeMenu}>
               Cart
             </Link>
           </li>
           <li className="bg-amber-300 px-4 py-2 uppercase tracking-[0.15em] text-neutral-900 transition hover:bg-amber-400 md:px-10 md:py-4">
-            <Link to="/">Book an Event</Link>
+            <Link to="/" onClick={closeMenu}>Book a Room</Link>
           </li>
         </ul>
       </div>

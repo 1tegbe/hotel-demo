@@ -2,13 +2,19 @@ import React, { useContext } from 'react';
 import { RoomContext } from '../Roomcontext/Roomlist';
 import { Link } from 'react-router-dom';
 import { checkOut_context } from '../Roomcontext/CheckoutContext';
+import { CartData } from '../Context/CartContext';
 
 const RoomPage = () => {
   const { setArr_id } = useContext(checkOut_context);
   const Dataset = useContext(RoomContext);
+  const { setCart } = useContext(CartData);
 
   const handleOnclick = (room) => {
     setArr_id(room);
+  };
+
+  const handleAddToCart = (room) => {
+    setCart((prev) => (prev.some((item) => item.id === room.id) ? prev : [...prev, room]));
   };
 
   return (
@@ -51,13 +57,20 @@ const RoomPage = () => {
                     </div>
                     <div className="text-gray-600">per night</div>
                     <div className="flex flex-col">
-                      <Link
-                        to="/checkout"
+                      <button
+                        type="button"
                         className="my-5 w-full bg-amber-600 px-2 py-1 text-center font-inter text-3xl text-black md:w-40"
                         onClick={() => handleOnclick(item)}
                       >
                         Book now
-                      </Link>
+                      </button>
+                      <button
+                        type="button"
+                        className="mb-3 w-full border border-stone-600 bg-transparent px-3 py-2 text-center font-inter text-2xl text-stone-300 md:w-40"
+                        onClick={() => handleAddToCart(item)}
+                      >
+                        Add to cart
+                      </button>
                       <Link
                         to="/checkout"
                         className="w-full border border-stone-600 bg-transparent px-3 py-2 text-center font-inter text-2xl text-stone-300 md:w-40"
