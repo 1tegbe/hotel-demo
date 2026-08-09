@@ -14,7 +14,7 @@ export default function DusselLoader() {
   }, []);
 
   return (
-    <div className="h-full w-full flex items-center justify-center bg-gradient-to-b from-white to-neutral-100">
+    <div className="h-screen w-full flex items-center justify-center bg-gradient-to-b from-white to-neutral-100">
       <div className="flex flex-col items-center gap-8">
         {/* Spinner ring + logo */}
         <div className="relative flex items-center justify-center">

@@ -1,11 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { checkOut_context } from '../Roomcontext/CheckoutContext';
+import { CheckoutData } from '../Roomcontext/checkoutpageContext';
+import PaystackPop from '@paystack/inline-js';
 
 const CheckoutPage = () => {
   const { arr_id } = useContext(checkOut_context);
+  const { email, setEmail, Name, setName, number, setNumber } = useContext(CheckoutData);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  
+
+  const handleSubmit = () => {
+    if (!arr_id) {
+      alert('Please select a room first.');
+      return;
+    }
+
+    if (!email || !Name || !number) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
+
+    if (!publicKey) {
+      alert('Paystack public key is missing. Add VITE_PAYSTACK_PUBLIC_KEY to your environment file.');
+      return;
+    }
+
+    const paystack = new PaystackPop();
+    paystack.newTransaction({
+      key: publicKey,
+      email,
+      amount: Number(arr_id?.price || 0) * 100,
+      name: Name,
+      onSuccess: (transaction) => {
+        console.log('Payment complete! Reference: ', transaction.reference);
+        alert(`Payment successful. Reference: ${transaction.reference}`);
+      },
+      onCancel: () => {
+        console.log('Payment window closed.');
+      }
+    });
+  };
+
   useEffect(() => {
     if (!arr_id?.images?.length) return;
 
@@ -29,7 +65,7 @@ const CheckoutPage = () => {
   return (
     <div className="p-10">
       <div className="text-center text-2xl font-medium text-black">Checkout</div>
-    
+
       <div className="mt-8 rounded-lg border border-stone-300 bg-white p-6 shadow-sm">
         <div className="relative overflow-hidden rounded-lg">
           {images.length > 0 ? (
@@ -91,13 +127,37 @@ const CheckoutPage = () => {
         <p className="mt-2 text-lg text-stone-600">{arr_id.category}</p>
         <p className="mt-4 text-stone-700 md:text-xl text-base font-medium">{arr_id.story}</p>
         <p className="mt-4 text-xl font-bold text-amber-600">₦{arr_id.price}</p>
-        {/* to get the contact from the user*/}
-      <div className=" flex flex-col">
-        <input type="text" placeholder="Enter Your Name" className="focus:border-2 focus:border-black text-base md:text-xl font-inter border-b border-gray-900" required/>
-        <input type="email" placeholder="Enter Your Email" className="focus:border-2 focus:border-black md:text-xl text-base font-inter border-b border-gray-900" required/>
-        <input type="number" placeholder="000-0000-0000" className="focus:border-2 focus:border-black md:text-xl font-inter border-b border-gray-900 text-base" required/>
-      </div>
-        <button className="bg-black text-white w-full p-5">CheckOut</button>
+
+        <div className="mt-6 flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            value={Name}
+            onChange={(e) => setName(e.target.value)}
+            className="border-b border-gray-900 pb-2 text-base font-inter focus:border-2 focus:border-black md:text-xl"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border-b border-gray-900 pb-2 text-base font-inter focus:border-2 focus:border-black md:text-xl"
+            required
+          />
+          <input
+            type="number"
+            placeholder="000-0000-0000"
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+            className="border-b border-gray-900 pb-2 text-base font-inter focus:border-2 focus:border-black md:text-xl"
+            required
+          />
+        </div>
+
+        <button className="mt-6 w-full bg-black p-5 text-white" onClick={handleSubmit}>
+          CheckOut
+        </button>
       </div>
     </div>
   );

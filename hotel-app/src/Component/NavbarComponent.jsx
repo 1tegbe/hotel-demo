@@ -50,8 +50,18 @@ const NavbarComponent = () => {
               Contact Us
             </Link>
           </li>
+            <li>
+            <Link to="/contact" className="hover:text-gray-600">
+              Service
+            </Link>
+          </li>
+                 <li>
+            <Link to="/contact" className="hover:text-gray-600">
+              Cart
+            </Link>
+          </li>
           <li className="bg-amber-300 px-4 py-2 uppercase tracking-[0.15em] text-neutral-900 transition hover:bg-amber-400 md:px-10 md:py-4">
-            <Link to="/">Reserve</Link>
+            <Link to="/">Book an Event</Link>
           </li>
         </ul>
       </div>
