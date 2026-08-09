@@ -53,6 +53,11 @@ const NavbarComponent = () => {
             </Link>
           </li>
           <li>
+            <Link to="/room" className="hover:text-gray-600" onClick={closeMenu}>
+              Rooms
+            </Link>
+          </li>
+          <li>
             <Link to="/cart" className="hover:text-gray-600" onClick={closeMenu}>
               Cart
             </Link>
